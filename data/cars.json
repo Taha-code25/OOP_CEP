@@ -1,58 +1,18 @@
 [
     {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
+        "carID": "car001",
+        "Brand": "Honda",
+        "Model": "Civic",
         "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "bkl-420",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 250,
+        "Rental Price": 2500,
         "Available": true
     },
     {
-        "carID": "bkl-2024",
-        "Brand": "Toyota",
-        "Model": "Corolla",
+        "carID": "car001",
+        "Brand": "Honda",
+        "Model": "Civic",
         "SeatingCapacity": 4,
-        "Rental Price": 250,
+        "Rental Price": 2500,
         "Available": true
     },
     {
@@ -64,28 +24,12 @@
         "Available": false
     },
     {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
+        "carID": "car001",
+        "Brand": "Honda",
+        "Model": "Civic",
         "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
-    },
-    {
-        "carID": "car002",
-        "Brand": "Toyota",
-        "Model": "Corolla",
-        "SeatingCapacity": 4,
-        "Rental Price": 2000,
-        "Available": false
+        "Rental Price": 2500,
+        "Available": true
     },
     {
         "carID": "car002",

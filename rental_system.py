@@ -98,14 +98,14 @@ class Rental_System:
             print(f"Error saving rental history: {e}")
 
     
-system = Rental_System()
-umer = User("umer123", "umer@mail.com", "pass", "Umer", "Ali", 10000, "customer", "Lahore")
-system.add_user(umer)
-civic = Car("car001", "Honda", "Civic", 4, 2500, True)
-system.add_car(civic)
-start = datetime(2025, 5, 6)
-end = datetime(2025, 5, 9)  # 3 days
-system.reserve_car("umer123", "car001", start, end)
+# system = Rental_System()
+# umer = User("umer123", "umer@mail.com", "pass", "Umer", "Ali", 10000, "customer", "Lahore")
+# system.add_user(umer)
+# civic = Car("car001", "Honda", "Civic", 4, 2500, True)
+# system.add_car(civic)
+# start = datetime(2025, 5, 6)
+# end = datetime(2025, 5, 9)  # 3 days
+# system.reserve_car("umer123", "car001", start, end)
 # print("\nRental History:")
 # for record in system.rental_history:
 #         print(record)
