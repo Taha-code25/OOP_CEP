@@ -40,8 +40,18 @@ class Admin(User):
         with open('data/cars.json','w') as f:
             json.dump(data,f,indent=4)
         print(f'Car {car_id} removed succesfully!')
-           
-            
+    def print_reserved_cars(self):
+        try:
+            with open('data/cars.json','r') as f:
+                data = json.load(f)
+                reserved_cars = []
+                for car in data:
+                    if car.get('isAvaialable') == False:
+                        reserved_cars.append(car)
+                return reserved_cars
+        except FileNotFoundError:
+            print("File not found!")
+        
     
 
 

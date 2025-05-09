@@ -218,5 +218,25 @@
         "Balance": null,
         "Role": "Admin",
         "Address": "Germany"
+    },
+    {
+        "Username": "Ali",
+        "Email": "a@gmail.com",
+        "Password": "1719",
+        "FirstName": "Ali",
+        "LastName": "Faisal",
+        "Balance": null,
+        "Role": "Admin",
+        "Address": "Germany"
+    },
+    {
+        "Username": "Ali",
+        "Email": "a@gmail.com",
+        "Password": "1719",
+        "FirstName": "Ali",
+        "LastName": "Faisal",
+        "Balance": null,
+        "Role": "Admin",
+        "Address": "Germany"
     }
 ]
