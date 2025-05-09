@@ -9,6 +9,7 @@ class User:
         self.balance = balance
         self.role = role
         self.address = address
+        self.rentalHistory = []
     def to_dict(self):
             return {
                 'Username':self.username,
@@ -19,7 +20,7 @@ class User:
                 'Balance':self.balance,
                 'Role':self.role,
                 'Address':self.address
-            }
+                 }
     def save_to_JSON(self,fileName):
             try:
                 with open('data/'+fileName,'r') as f:
@@ -29,5 +30,6 @@ class User:
             data.append(self.to_dict())
             with open('data/'+fileName,'w') as f:
                 json.dump(data, f, indent=4)
+
 # person1 = User('Taha Faisal','taha@g.com','3675','Taha','Faisal','6900','Admin','Tere Ghar')
 # person1.save_to_JSON('data/people.json')

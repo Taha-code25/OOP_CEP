@@ -22,14 +22,14 @@ class Car:
         }
     def save_to_json(self,fileName):
         try:
-            with open('data/'+str(fileName),'r') as f:
+            with open('data/'+fileName,'r') as f:
                 data = json.load(f)
         except FileNotFoundError:
             data = []
         data.append(self.to_dict())
-        with open('data/'+str(fileName),'w') as f:
+        with open('data/'+fileName,'w') as f:
             json.dump(data,f,indent=4)
 c1 = Car('car001','Honda','Civic',4,2500,True)
-c2 =Car('car002','Toyota','Corolla',4,2000,False)
+c2 = Car('car002','Toyota','Corolla',4,2000,False)
 c1.save_to_json('cars.json')
 c2.save_to_json('cars.json')
