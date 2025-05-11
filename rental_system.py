@@ -1,6 +1,7 @@
 from user import User
 from car import Car
 import json
+import os
 from datetime import datetime
 class Rental_System:
     def __init__(self):
@@ -89,24 +90,72 @@ class Rental_System:
             car.markAvailable()                           # Mark car available if it exists
         user.return_car()                                 # Remove rental from user's record
         return f'{username} returned the car with Car ID: {car_id}'
-    
+   
     def save_rental_history(self, file_name='rental_history.json'):
+        file_path = f"data/{file_name}"
+        
         try:
-            with open(f"data/{file_name}", "w") as f:
-                    json.dump(self.rental_history, f, indent=4)
+            # Load existing history if file exists and is not empty
+            if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+            else:
+                existing_data = []
+
+            # Merge new records
+            existing_data.extend(self.rental_history)
+
+            # Write full list back to file
+            with open(file_path, "w") as f:
+                json.dump(existing_data, f, indent=4)
+
+            # Clear in-memory history after saving
+            self.rental_history.clear()
+            print("Rental history saved to file.")
+
         except Exception as e:
             print(f"Error saving rental history: {e}")
 
+        except Exception as e:
+            print(f"Error saving rental history: {e}")
+            
+            
+    def view_user_rental_history(self, username, file_name='rental_history.json'):
+        if username not in self.users:
+            return f"User '{username}' not found."
+
+        file_path = f"data/{file_name}"
+
+        try:
+            # Load history from file
+            if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+                with open(file_path, "r") as f:
+                    full_history = json.load(f)
+            else:
+                full_history = []
+        except Exception as e:
+            return  f"Error loading rental history: {e}"
+
+        # Filter user's records
+        user_history = [record for record in full_history if record["username"] == username]
+
+        if not user_history:
+            return f"No rental history found for user '{username}'."
+
     
-# system = Rental_System()
-# umer = User("umer123", "umer@mail.com", "pass", "Umer", "Ali", 10000, "customer", "Lahore")
-# system.add_user(umer)
-# civic = Car("car001", "Honda", "Civic", 4, 2500, True)
-# system.add_car(civic)
-# start = datetime(2025, 5, 6)
-# end = datetime(2025, 5, 9)  # 3 days
-# system.reserve_car("umer123", "car001", start, end)
-# print("\nRental History:")
-# for record in system.rental_history:
-#         print(record)
-# print(f"\nRemaining balance: ${umer.balance}")
+
+        return user_history
+            
+
+
+system2 = Rental_System()
+faisal = User("faisal", "umer@mail.com", "pass", "Umer", "Ali", 50000, "customer", "Lahore")
+system2.add_user(faisal)
+toyota = Car("car002", "Toyota", "Corolla", 4, 2500, True)
+system2.add_car(toyota)
+start = datetime(2025, 5, 6)
+end = datetime(2025, 5, 9)  # 3 days
+system2.reserve_car("faisal", "car002", start, end)
+print(f"\nRemaining balance: ${faisal.balance}")
+system2.save_rental_history()
+print(system2.view_user_rental_history("faisal"))
