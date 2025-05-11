@@ -63,13 +63,16 @@ class Admin(User):
                 return reserved_cars
         except FileNotFoundError:
             print("File not found!")
+    def print_rental_history(self):
+        try:
+            with open('data/rental_history.json','r') as f:
+                data = json.load(f)
+                return data
+        except FileNotFoundError:
+            print("File Not Found!!")
+            
 
 # Example usage
 a1 = Admin('Ali', 'a@gmail.com', '1719', 'Ali', 'Faisal', 0, 'Admin', 'Germany')
-a1.save_to_JSON('people.json')
-
-try:
-    a1.remove_car_from_system('car002')
-except ValueError as e:
-    print("Error:", e)
+print(a1.print_rental_history())
 
