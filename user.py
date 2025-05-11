@@ -41,9 +41,10 @@ class User:
             return True
         else:
             return False
+    def rent_a_car(self, car_id):
+        self.rented_car_id = car_id
+
     def return_car(self):
-        self.rented_card_id=None
-    def rent_a_car(self,car_id):
-        self.rented_card_id=car_id
+        self.rented_car_id = None
 # person1 = User('Taha Faisal','taha@g.com','3675','Taha','Faisal','6900','Admin','Tere Ghar')
 # person1.save_to_JSON('data/people.json')
