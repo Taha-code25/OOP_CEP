@@ -9,7 +9,7 @@ class Auth:
             for user in users:
                 if user['Username'] == username and user['Password'] == password:
                     return True
-                return False
+            return False
         except FileNotFoundError:
             print(" Error: Data file not found.")
         except KeyError as e:

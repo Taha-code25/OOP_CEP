@@ -73,6 +73,6 @@ class Admin(User):
             
 
 # Example usage
-a1 = Admin('Ali', 'a@gmail.com', '1719', 'Ali', 'Faisal', 0, 'Admin', 'Germany')
-print(a1.print_rental_history())
+# a1 = Admin('Ali', 'a@gmail.com', '1719', 'Ali', 'Faisal', 0, 'Admin', 'Germany')
+# print(a1.print_rental_history())
 
