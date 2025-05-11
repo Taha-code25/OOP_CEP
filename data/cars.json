@@ -38,5 +38,53 @@
         "SeatingCapacity": 4,
         "Rental Price": 2000,
         "Available": false
+    },
+    {
+        "carID": "car001",
+        "Brand": "Honda",
+        "Model": "Civic",
+        "SeatingCapacity": 4,
+        "Rental Price": 2500,
+        "Available": true
+    },
+    {
+        "carID": "car002",
+        "Brand": "Toyota",
+        "Model": "Corolla",
+        "SeatingCapacity": 4,
+        "Rental Price": 2000,
+        "Available": false
+    },
+    {
+        "carID": "car001",
+        "Brand": "Honda",
+        "Model": "Civic",
+        "SeatingCapacity": 4,
+        "Rental Price": 2500,
+        "Available": true
+    },
+    {
+        "carID": "car002",
+        "Brand": "Toyota",
+        "Model": "Corolla",
+        "SeatingCapacity": 4,
+        "Rental Price": 2000,
+        "Available": false
+    },
+    {
+        "carID": "car001",
+        "Brand": "Honda",
+        "Model": "Civic",
+        "SeatingCapacity": 4,
+        "Rental Price": 2500,
+        "Available": true
+    },
+    {
+        "carID": "car002",
+        "Brand": "Toyota",
+        "Model": "Corolla",
+        "SeatingCapacity": 4,
+        "Rental Price": 2000,
+        "Available": false
     }
 ]

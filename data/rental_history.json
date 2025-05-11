@@ -1,0 +1,13 @@
+[
+    {
+        "username": "faisal",
+        "email": "umer@mail.com",
+        "car_id": "car002",
+        "brand": "Toyota",
+        "model": "Corolla",
+        "start_date": "2025-05-06",
+        "end_date": "2025-05-09",
+        "total_days": 3,
+        "total_cost": 7500
+    }
+]
